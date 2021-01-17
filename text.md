@@ -21,10 +21,10 @@ Definition: Contiguous arear of memory consisting of equal size elements indexed
 Singly-Linked List: Node contains Key, Next Pointer.
 Doubly-linked List: Node contains Key, Next Pointer, Prev Pointer.
 
-    Constant time to insert at or remove from the fromt.
+    Constant time to insert at or remove from the front.
     With tail and doubly-linked, conmstant time to insert at or remove from the back.
     O(n) to find arbitary element.
-    List elemennts need not be contiguous.
+    List elements need not be contiguous.
     With doubly linked list, const time to insert between node or remove a node.
 
 ### Stacks
@@ -40,4 +40,48 @@ Enqueue(key): adds key to teh back of collection, use List.PushBack
 Key Dequeue(): removes and returns least recently-added key, use List.TopFront and List.PopFront.
 Boolean Empty()
 Can be implemented with eitehr a linked list (with tail pointer) or an array
-Eacg queue operation is O(1).
+Each queue operation is O(1).
+
+### Trees
+
+Trees have keys and children.
+Definition: A tree is
+*Empty
+*a ndoe with:
+*a key
+*a list of child trees
+
+Tree Walks(Tree Traversal): DFS(Pre-order, In-Order, Post-Order), and BFS.
+When traversing/walking a tree, recursive algorithm is common.
+
+Node contains:
+*Key
+*Children: list of children nodes
+\*(optional) parent
+
+### Binary Search Tree
+
+Two children at each node.
+
+\*Value of root node is GREATER than the LEFT node, and is LESS than the RIGHT node.
+Leaf: Node with no children.
+Interior Node: non-leaf, have children.
+Level: 1+ NO. of edges bewteen root and the node.
+Height: maximum depthof sub-tree node ad farthest leaf.
+Forrest: Collection of trees
+
+Binary tree node constains:
+*Key
+*Left
+_Right
+_(optional) parent
+
+Function: Height(tree)
+if (tree = nil)
+return 0;
+return Max(1 + Height(tree.left), 1 + + Height(tree.right))
+
+Function: Size(tree)
+if (tree = nil)
+return 0;
+return 1 + Size(tree.left) + Size(tree.right)
