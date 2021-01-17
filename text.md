@@ -85,3 +85,52 @@ Function: Size(tree)
 if (tree = nil)
 return 0;
 return 1 + Size(tree.left) + Size(tree.right)
+
+### Tree Traversal
+
+Visit the nodes in a particular order.
+Print the nodes of the tree.
+
+## Depth-First
+
+Completely traverse one sub-tree before exploring a sibling sub-tree.
+
+Implicitly uses stacks to store information about location and nodes.
+
+Function: InOrderTraverse(tree)
+if (tree = nil)
+return
+InOrderTraverse(tree.left)
+Print(tree.key)
+InOrderTraverse(tree.right)
+
+Function: PreOrderTraverse(tree)
+if (tree = nil)
+return
+Print(tree.key)
+PreOrderTraverse(tree.left)
+PreOrderTraverse(tree.right)
+
+Function: PostOrderTraverse(tree)
+if (tree = nil)
+return
+
+    PostOrderTraverse(tree.left)
+    PostOrderTraverse(tree.right)
+    Print(tree.key)
+
+## Breath-First
+
+Traverse all nodes at one level before progressing to the next.
+
+Function: LevelTraverse(tree)
+if (tree = nil), return
+Queue q
+q.Enqueue(tree)
+while not q.Empty()
+node <= q.Dequeue()
+Print(node)
+if (node.left != nil)
+q.Enqueue(node.left)
+if (node.right != nil)
+q.Enqueue(node.right)
