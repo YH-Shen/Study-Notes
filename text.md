@@ -136,3 +136,21 @@ if (node.right != nil)
 q.Enqueue(node.right)
 
 ### Priority Queue
+
+An abstract data type supporting:
+Insert(p) adds a new element with priority p
+ExtractMax() extracts an element with maximum proority
+
+Unsorted Array/List
+Insert() running time: O(1)
+ExtractMax() running time: O(n)
+
+Sorted Array
+Insert() running time: O(n)
+ExtractMax() running time: O(1)
+
+Sorted doubly linked lists:
+Insert() running time: O(n)
+ExtractMax() running time: O(1)
+
+insert is cheap since it only needs to change 4 pointers, but cannot perform binary search with lists. Therefore runnning time for insertion is O(n) for sorted list.
