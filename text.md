@@ -154,3 +154,9 @@ Insert() running time: O(n)
 ExtractMax() running time: O(1)
 
 insert is cheap since it only needs to change 4 pointers, but cannot perform binary search with lists. Therefore runnning time for insertion is O(n) for sorted list.
+
+### Binary Heaps
+
+## Binary Max Heap
+
+## Complete Binary Tree
