@@ -157,6 +157,27 @@ insert is cheap since it only needs to change 4 pointers, but cannot perform bin
 
 ### Binary Heaps
 
+Advantages:
+
+Fast: O(log n) operations, GetMaxis O(1)
+
+Space Efficient: Array Storage, no need to store for parent child connections
+
+Easy to implement: few liones of code
+
 ## Binary Max Heap
+
+Parent node >= children.
+Height: Number of edges on the logest path
+
+Operations:
+
+GetMax: O(1), root node for the binary max heap.
+Insert: O(tree hieght), attach a new node to any leaf, and then SiftUp (swap elements)
+ExtractMax: O(tree height), Take out the root node and then Replace root with any leaf. SiftDown (swap with larger children until appropriate position).
+ChangePriority: O(tree height), Increase/Decrease the value of the leaf, and then Sift Up/Down
+Remove: O(tree heught), change the proority of the element to infinite, then extract maximum.
+
+We want a shallow tree
 
 ## Complete Binary Tree
