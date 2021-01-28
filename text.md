@@ -181,3 +181,11 @@ Remove: O(tree heught), change the proority of the element to infinite, then ext
 We want a shallow tree
 
 ## Complete Binary Tree
+
+### JS falsy values
+
+0;
+EMpty Stirngs like "";
+null;
+undefined;
+NaN;
