@@ -189,3 +189,5 @@ EMpty Stirngs like "";
 null;
 undefined;
 NaN;
+
+### objects
