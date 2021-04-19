@@ -168,3 +168,52 @@ If the parent element has a height:
     margin-top: -50px;
 }
 ```
+
+### flex
+
+Flex container provides flex content for its direct children.
+flex-flow is short for flex-direction, and flex-wrap.
+justify-content values: flex-start, flex-end, center, space-between, space-around, space-evenly.
+
+The flex property sets how a flex item will grow or shrink to fit the space available in the flex container.
+
+flex is shorthand for flex-grow | flex-shrink | flex-basis
+The second number is flex-shrink if it's a number, flex-basis if a specific value for width such as pxs, or em.
+
+For # ##:
+justify-content: space-between;
+mid element: margin-left: auto;
+
+### What is BFC?
+
+Block formatting context(BFC)
+Example: A box with "overflow: hidden" would create BFC to hide the overflown element.
+
+It's also craeted when absolute/fixed posiiton is used.
+Also with table cells, inline-blocks, direct children of the flex/grid container if they are not flex, or grid, or table containers themselves.
+
+### CSS Selector Priorities
+
+1. The more specifically ddefined, the higher priority:
+   " :not (.xxx):first-child{}" has higher priority than just ".xxx {}". ID > class > type selectors and pseudo-elements
+2. The later ones overwrites the ones above(early ones)
+3. important! has highest priority, but use with caution
+
+common wrong answer:
+0000
+0001
+0010
+
+### Clear Floats(Clearfix)
+
+Elemnts after a floating element will flow around it.
+
+```css
+.clearfix {
+    content: "";
+    display: block / table;
+    clear: both;
+}
+```
+
+add this clearfix class to the container, the floats of the children elements will be cleared.
