@@ -14,7 +14,7 @@
     4. [What is BFC?](#what-is-bfc?)
     5. [CSS Selector Priorities](#css-selector-priorities)
     6. [Clear Floats(Clearfix)](<#clear-floats(clearfix)>)
-3. Vanilla JS
+3. JS
 
 ---
 
@@ -223,3 +223,50 @@ Elemnts after a floating element will flow around it.
 ```
 
 add this clearfix class to the container, the floats of the children elements will be cleared.
+
+## JS
+
+### ES6 basics
+
+#### block
+
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
+
+A block statement(compound statement) is used to group zero or more statements(basically the curly braces)
+
+Variables declared with "var" or created by function delcarations in non-strict mode do not have block scope. They affect things beyond the block itself. Block statments do not introduce a scope.
+
+Identifiers declared withg "let" and "const" do have block scope.
+
+#### let
+
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+
+The "let" statement declares a block-scoped local variable, optionally intitializing it to a value.
+
+Often declare let variables at the top of the scope to avoid many issues.
+
+#### Difference between let and var
+
+1. Block Scope:
+   let declares variables that are block scoped. var declares a variable globally or locally regardless of blcok scope.
+2. Initialization:
+   let is initialized to a value only when a parser evaluates it.
+3. Object:
+   At the top level of programs and functions, let, unlike var does not create a property on the global object.
+
+#### Temperal dead zone (TDZ)
+
+let variables cannot be read/writen until they have been fully initialized, which happens when they are declared.
+
+#### constant
+
+#### class
+
+#### Promise
+
+#### Promise.all
+
+#### Promise.race
+
+### debounce and throttle
