@@ -22,6 +22,8 @@
         3. [const](#const)
         4. [Arrow functions](#arrow-functions)
         5. [Default parameters](#default-parameters)
+        6. [Promise](#promise)
+4. React 1. [Functional component vs class component](#functional-component-vs-class-component)
 
 ---
 
