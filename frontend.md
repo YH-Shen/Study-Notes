@@ -7,6 +7,7 @@
     2. [meta viewport](#meta-viewport)
     3. [Common HTML5 Tags](#common-html5-tags)
     4. [What is H5?](#what-is-h5?)
+    5. [Block vs inline Elements](#block-vs-inline-elements)
 2. CSS
     1. [CSS Box Model](#css-box-model)
     2. [How to Vertically Center an Element?](#how-to-vertically-center-an-element?)
@@ -15,6 +16,12 @@
     5. [CSS Selector Priorities](#css-selector-priorities)
     6. [Clear Floats(Clearfix)](<#clear-floats(clearfix)>)
 3. JS
+    - ES6 Basics
+        1. [block](#block)
+        2. [let](#let)
+        3. [const](#const)
+        4. [Arrow functions](#arrow-functions)
+        5. [Default parameters](#default-parameters)
 
 ---
 
@@ -72,6 +79,14 @@ HTML5 is a standard, but H5 development is a collection of technologies includin
 5. Animated text and images (css3 animation and js)
 6. Forms
 7. Supports image and text uploading.
+
+### Block vs inline Elements
+
+-   A block-level element always starts on a new line.
+
+-   A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+
+-   A block level element has a top and a bottom margin, whereas an inline element does not.
 
 ## 2. CSS
 
@@ -226,6 +241,10 @@ add this clearfix class to the container, the floats of the children elements wi
 
 ## JS
 
+7 fundamental data types: strings, numbers, booleans, null, undefined, symbols, and object.
+
+falsey values: 0, empty strings " ", null, undefined, NaN
+
 ### ES6 basics
 
 #### block
@@ -246,7 +265,7 @@ The "let" statement declares a block-scoped local variable, optionally intitiali
 
 Often declare let variables at the top of the scope to avoid many issues.
 
-#### Difference between let and var
+##### Difference between let and var
 
 1. Block Scope:
    let declares variables that are block scoped. var declares a variable globally or locally regardless of blcok scope.
@@ -255,18 +274,91 @@ Often declare let variables at the top of the scope to avoid many issues.
 3. Object:
    At the top level of programs and functions, let, unlike var does not create a property on the global object.
 
-#### Temperal dead zone (TDZ)
+##### Temperal dead zone (TDZ)
 
 let variables cannot be read/writen until they have been fully initialized, which happens when they are declared.
 
-#### constant
+#### const
+
+Block-scoped, similar to let variables. Cannot be redecalred. The value of a contant can't be changed through reassignmint.
+
+Does not mean the value it holds is immutable, just that the variable identifier cannot be reassigned. If the content is an object, the object's contents can be altered.
+
+Convention to use all uppercase letters for const variables
+
+Needs to be initialized.
+
+```js
+//This will throw an Uncaught SytaxERROR
+const FOO;
+```
 
 #### class
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class
+
+The class declaration creates a new class with a given name using prototype-based inheritance.
+
+##### Or css class
+
+Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
+
+An element's class name serves two key roles:
+
+1. As a style sheet selector, for when an author assigns style information to a set of elements.
+2. For general use by the browser.
+
+#### arrow functions
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+A compact/concise alternative to the tradictional function expression, but limited.
+
+##### Difference & Limitations
+
+-   Does not have its own bindings to "this" or "super", and should not be used as "methods"
+-   Doe not have arguments, or new target keywords.
+    Not suitable for "call", "apply" and "bind" methods, which generally rely on establishing a scope
+-   Cannot be used as constructors
+-   Cannot use "yield" within its body.
+
+```js
+// Traditional
+function (a, b){
+    return a + b + 100;
+}
+
+// Arrow Function
+(a, b) => a + b + 100;
+// if no arguments
+() => a + b + 100;
+
+// Traditional named functions
+function bob (a){
+    return a + 100;
+}
+// arrow function
+let bob = a => a + 100;
+```
+
 #### Promise
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 #### Promise.all
 
 #### Promise.race
 
 ### debounce and throttle
+
+#### Default parameters
+
+Default function parameters allow named parameters to be initialized with default values if no value or "undefined" is passed.
+
+Set default value in teh function head:
+
+```js
+function (a, b = 1){
+    return a * b;
+}
+```
