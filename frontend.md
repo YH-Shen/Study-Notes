@@ -380,3 +380,18 @@ function (a, b = 1){
     return a * b;
 }
 ```
+
+#### Functional component vs class component
+
+##### Functional(Stateless)
+
+-   Functional components are stateless components and are easier to write. Class components hold states – stateful components.
+-   Functional components are JS functions that returns html UI. It accepts props in function and return JSX(html)
+-   There is no render method used in functional components.
+-   These can be typically defined using arrow functions but can also be created with the regular function keyword.
+
+##### Class(Stateful)
+
+Class components are regular ES6 classes that extends component class from React Library. It must have render() method returning html
+It has complex UI Logic
+You pass props to class components and access them with this.props
