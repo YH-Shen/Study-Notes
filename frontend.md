@@ -399,3 +399,33 @@ It has complex UI Logic
 You pass props to class components and access them with this.props
 
 #### Controlled Components vs Uncontrolled Components
+
+```js
+<MyInput value={x} onChange={fn}/> // Controlled Component
+ <MyInput defaultValue={x} ref={input}/> // Uncontrolled Component
+```
+
+The state of the controlled components are handled and maintained by the developer. The uncontrolled components' states are maintained by the component itself(not controlled by the developer.
+
+#### React Lifecyle
+
+3 mian phases: Mounting, Updating, and Unmounting.
+
+##### Mounting
+
+1. constructor()
+2. getDerivedStateFromProps()
+3. render()
+4. componentDidMount()
+
+##### Updating
+
+1. getDerivedStateFromProps()
+2. shouldComponentUpdate()
+3. render()
+4. getSnapshotBeforeUpdate()
+5. componentDidUpdate()
+
+#### Unmounting
+
+1. componentWillMount()
