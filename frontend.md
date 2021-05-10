@@ -23,7 +23,7 @@
         4. [Arrow functions](#arrow-functions)
         5. [Default parameters](#default-parameters)
         6. [Promise](#promise)
-4. React 1. [Functional component vs class component](#functional-component-vs-class-component)
+4. React 1. [Functional component vs class component](#functional-component-vs-class-component) 2. [Controlled Components vs Uncontrolled Components](#controlled-components-vs uncontrolled-components)
 
 ---
 
@@ -397,3 +397,5 @@ function (a, b = 1){
 Class components are regular ES6 classes that extends component class from React Library. It must have render() method returning html
 It has complex UI Logic
 You pass props to class components and access them with this.props
+
+#### Controlled Components vs Uncontrolled Components
