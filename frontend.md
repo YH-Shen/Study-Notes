@@ -23,7 +23,10 @@
         4. [Arrow functions](#arrow-functions)
         5. [Default parameters](#default-parameters)
         6. [Promise](#promise)
-4. React 1. [Functional component vs class component](#functional-component-vs-class-component) 2. [Controlled Components vs Uncontrolled Components](#controlled-components-vs uncontrolled-components)
+4. React
+    1. [Functional components vs class components](#functional-components-vs-class-components)
+    2. [Controlled Components vs Uncontrolled Components](#controlled-components-vs-uncontrolled-components)
+    3. [React Lifecyle](#react-lifecycle)
 
 ---
 
