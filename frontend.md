@@ -27,6 +27,7 @@
     1. [Functional components vs class components](#functional-components-vs-class-components)
     2. [Controlled Components vs Uncontrolled Components](#controlled-components-vs-uncontrolled-components)
     3. [React Lifecyle](#react-lifecycle)
+    4. [Redux](#what-is-redux?)
 
 ---
 
@@ -220,7 +221,7 @@ Also with table cells, inline-blocks, direct children of the flex/grid container
 
 ### CSS Selector Priorities
 
-1. The more specifically ddefined, the higher priority:
+1. The more specifically defined, the higher priority:
    " :not (.xxx):first-child{}" has higher priority than just ".xxx {}". ID > class > type selectors and pseudo-elements
 2. The later ones overwrites the ones above(early ones)
 3. important! has highest priority, but use with caution
@@ -432,3 +433,7 @@ The state of the controlled components are handled and maintained by the develop
 #### Unmounting
 
 1. componentWillMount()
+
+#### What is Redux?
+
+Redux is a JavaScript State Container that help apps to behave coinsistently across client, server, adn native environments. Mostly used as a state management tool.
