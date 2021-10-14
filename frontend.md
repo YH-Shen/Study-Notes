@@ -31,6 +31,8 @@
     2. [Controlled Components vs Uncontrolled Components](#controlled-components-vs-uncontrolled-components)
     3. [React Lifecyle](#react-lifecycle)
     4. [Redux](#what-is-redux?)
+    5. [SPA](<#what-is-single-page-application-(SPA)?>)
+    6. [Virtual Dom](#what-is-virtual-dom?)
 5. HTTP
     1. [What happens when you enter google.com and press enter?](#what-happens-when-you-enter-google.com-and-press-enter?)
 
@@ -363,6 +365,8 @@ function bob (a){
 let bob = a => a + 100;
 ```
 
+#### Difference between apply, call, and bind
+
 #### Promise
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
@@ -502,6 +506,10 @@ Redux is a JavaScript State Container that help apps to behave coinsistently acr
 #### What is Single Page Application (SPA)?
 
 An SPA dynamically rewrites necessary parts of the page according to user interactions. The server does not re-render the entire page with each click and sends it to the browser. The SPA only sends necessary information and the browser re-renders that part. This client-side method makes loading much faster and reduces the amount of information the server has to send. Makes server requests and responses much cost-effective.
+
+#### What is Virtual DOM?
+
+Virtual DOM is a lightweight JavaScript abstract representation of the real DOM. It is kept in memory and in sync with the real DOM. It is easier to find the changes and find the most effective way to update the real DOM.
 
 ## HTTP
 
