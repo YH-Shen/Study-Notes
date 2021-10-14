@@ -7,7 +7,9 @@
     2. [meta viewport](#meta-viewport)
     3. [Common HTML5 Tags](#common-html5-tags)
     4. [What is H5?](#what-is-h5?)
-    5. [Block vs inline Elements](#block-vs-inline-elements)
+    5. [HTML 5 New Features?](#html-5-new-features?)
+    6. [Block vs inline Elements](#block-vs-inline-elements)
+    7. [ARIA](#aria)
 2. CSS
     1. [CSS Box Model](#css-box-model)
     2. [How to Vertically Center an Element?](#how-to-vertically-center-an-element?)
@@ -23,11 +25,14 @@
         4. [Arrow functions](#arrow-functions)
         5. [Default parameters](#default-parameters)
         6. [Promise](#promise)
+        7. [AJAX](#ajax)
 4. React
     1. [Functional components vs class components](#functional-components-vs-class-components)
     2. [Controlled Components vs Uncontrolled Components](#controlled-components-vs-uncontrolled-components)
     3. [React Lifecyle](#react-lifecycle)
     4. [Redux](#what-is-redux?)
+5. HTTP
+    1. [What happens when you enter google.com and press enter?](#what-happens-when-you-enter-google.com-and-press-enter?)
 
 ---
 
@@ -45,14 +50,14 @@ We usually just do:
 
 ```html
 <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+	name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
 />
 ```
 
-The browswer's viewport is the are of the window in which web content can be seen. This is often not the same size as the rendered page, that's why we have scroll bars to access all the content.
+The browswer's viewport is the area of the window in which web content can be seen. This is often not the same size as the rendered page, that's why we have scroll bars to access all the content.
 
-The narrowscreen devices render the page in a vritual window or viewport and then shrink it down to the screen width. the width controls the size of the viewport, initial sclae controls the zoom level when the page is first loaded. maximum scale and minimum sclae controls how much the user can zoom in and out.
+The narrow screen devices render the page in a virtual window or viewport and then shrink it down to the screen width. the width controls the size of the viewport, initial scale controls the zoom level when the page is first loaded. maximum scale and minimum sclae controls how much the user can zoom in and out.
 
 ### Common HTML5 Tags
 
@@ -86,6 +91,13 @@ HTML5 is a standard, but H5 development is a collection of technologies includin
 6. Forms
 7. Supports image and text uploading.
 
+### HTML 5 New Features?
+
+1. Audio and video;
+2. Header and footer tags, figure, and figure caption tags, Nav tags
+3. Placeholder attribute, email attribute
+4. Vector graphics that are scalable, easy to create and edit. Supports animation nad interactivity.
+
 ### Block vs inline Elements
 
 -   A block-level element always starts on a new line.
@@ -93,6 +105,10 @@ HTML5 is a standard, but H5 development is a collection of technologies includin
 -   A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
 
 -   A block level element has a top and a bottom margin, whereas an inline element does not.
+
+### ARIA
+
+ARIA: Accessible Rich Internet Application is a set of attributes for accessibility purposes. aira-label, or role can be used to give or add more specific semantic meaning to html elements.
 
 ## 2. CSS
 
@@ -116,10 +132,10 @@ If the parent element has a height:
 
 ```css
 .parent {
-    height: 100px;
-    display: flex;
-    justify-content: center; // primary axis alignment, default horizontal
-    align-items: center; // secondary axis alignment, default vertical
+	height: 100px;
+	display: flex;
+	justify-content: center; // primary axis alignment, default horizontal
+	align-items: center; // secondary axis alignment, default vertical
 }
 .child {
 }
@@ -129,17 +145,17 @@ If the parent element has a height:
 
 ```css
 .parent {
-    position: relative;
-    /* some height */
+	position: relative;
+	/* some height */
 }
 .child {
-    position: absolute;
-    /* some height and width */
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+	position: absolute;
+	/* some height and width */
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 ```
 
@@ -147,9 +163,9 @@ If the parent element has a height:
 
 ```html
 <table class="parent">
-    <tr>
-        <td class="child">some random text</td>
-    </tr>
+	<tr>
+		<td class="child">some random text</td>
+	</tr>
 </table>
 ```
 
@@ -157,27 +173,27 @@ If the parent element has a height:
 
 ```css
 .parent {
-    height: 600px;
-    text-align: center;
+	height: 600px;
+	text-align: center;
 }
 
 .child {
-    display: inline-block;
-    width: 300px;
-    vertical-align: middle;
+	display: inline-block;
+	width: 300px;
+	vertical-align: middle;
 }
 
 .parent:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 .parent:after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 ```
 
@@ -185,14 +201,14 @@ If the parent element has a height:
 
 ```css
 .parent {
-    height: 600px;
-    position: relative;
+	height: 600px;
+	position: relative;
 }
 .child {
-    position: absolute;
-    top: 50%;
-    height: 100px;
-    margin-top: -50px;
+	position: absolute;
+	top: 50%;
+	height: 100px;
+	margin-top: -50px;
 }
 ```
 
@@ -237,9 +253,9 @@ Elemnts after a floating element will flow around it.
 
 ```css
 .clearfix {
-    content: "";
-    display: block / table;
-    clear: both;
+	content: "";
+	display: block / table;
+	clear: both;
 }
 ```
 
@@ -373,7 +389,52 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
 
+#### AJAX
+
+AJAX = Asynchronous JavaScript And XML. AJAX is a combination of:
+
+1. A browser built-in XMLHttpRequest object (to request data from a web server)
+2. JS and HTML DOM
+
 ### debounce and throttle
+
+Both to optmize performance and reduce function calling frequency.
+Throttle emits a new function call only once in a determined period.
+Debounce emits new function call if there are no input in the last determined period.
+
+```js
+function throttle(func, delay) {
+	let canUse = true;
+	let context = this;
+	return function () {
+		if (canUse) {
+			func.apply(context, arguments);
+			canUse = false;
+			setTimeout(() => {
+				canUse = true;
+			}, delay);
+		}
+	};
+}
+
+const throttled = throttle(() => console.log("hi"), 1000);
+throttled();
+throttled();
+
+function debounce(func, delay) {
+	let timerId = null;
+	return function () {
+		const context = this;
+		if (timerId) {
+			window.clearTimeout(timerId);
+		}
+		timerId = setTimeout(() => {
+			func.apply(context, arguments);
+			timerId = null;
+		}, delay);
+	};
+}
+```
 
 #### Default parameters
 
@@ -436,4 +497,20 @@ The state of the controlled components are handled and maintained by the develop
 
 #### What is Redux?
 
-Redux is a JavaScript State Container that help apps to behave coinsistently across client, server, adn native environments. Mostly used as a state management tool.
+Redux is a JavaScript State Container that help apps to behave coinsistently across client, server, and native environments. Mostly used as a state management tool.
+
+#### What is Single Page Application (SPA)?
+
+An SPA dynamically rewrites necessary parts of the page according to user interactions. The server does not re-render the entire page with each click and sends it to the browser. The SPA only sends necessary information and the browser re-renders that part. This client-side method makes loading much faster and reduces the amount of information the server has to send. Makes server requests and responses much cost-effective.
+
+## HTTP
+
+#### What happens when you enter google.com and press enter?
+
+1. The browser checks the cache for a DNS record. And the DNS record contains the URL and the corresponding IP address.
+2. If the cache does not contain the requested URL, then the browser sends a DNS query to the Internect Service Provider's (ISP) DNS server to find the IP address of the server that hosts google.com URL.
+3. Once the browser receivess the correct IP address, it will initiate a TCP(protocol) connection with the server to transfer information.
+4. The browser sends a HTTP get request to the web server.
+5. The server handles the req and sends back a HTTP response which contains a html file
+6. The browser uses the JS engine(v8 for chrome) to parse the html file into DOM, and then css parser to parse the css to generate CSSOM.
+7. The DOM will be combined with CSSOM to render the final webpage.
